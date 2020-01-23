@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
 @Entity
@@ -33,6 +35,20 @@ public class PolicyEntity {
 
 	@Column(name = "is_active")
 	private Boolean isActive;
+
+	@PrePersist
+	public void onPersist() {
+		if (this.startDate == null) {
+			this.startDate = new Date();
+		}
+	}
+
+	@PreUpdate
+	public void onUpdate() {
+		if (this.endDate == null) {
+			this.endDate = new Date();
+		}
+	}
 
 	public Integer getId() {
 		return id;

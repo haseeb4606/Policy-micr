@@ -5,9 +5,7 @@ import java.util.Date;
 
 public class PolicyDto implements Serializable {
 	private static final long serialVersionUID = 3248917713969658188L;
-
 	private Integer id;
-	private String uuid;
 	private String polNumber;
 	private String type;
 	private Date startDate;
@@ -20,14 +18,6 @@ public class PolicyDto implements Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public String getUuid() {
-		return uuid;
-	}
-
-	public void setUuid(String uuid) {
-		this.uuid = uuid;
 	}
 
 	public String getPolNumber() {

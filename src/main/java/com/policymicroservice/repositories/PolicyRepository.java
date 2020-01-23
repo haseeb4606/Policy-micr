@@ -7,6 +7,5 @@ import com.policymicroservice.entities.PolicyEntity;
 
 @Repository
 public interface PolicyRepository extends CrudRepository<PolicyEntity, Integer> {
-	public PolicyEntity findBypolNum(String polNum);
 
 }

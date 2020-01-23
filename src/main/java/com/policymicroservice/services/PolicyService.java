@@ -2,6 +2,7 @@ package com.policymicroservice.services;
 
 import java.util.Optional;
 import java.util.Random;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,9 +24,7 @@ public class PolicyService {
 		pe.setStartDate(dto.getStartDate());
 		pe.setEndDate(dto.getEndDate());
 		pe.setIsActive(dto.getIsActive());
-
-		Random random = new Random();
-		pe.setUuid(random.toString());
+		pe.setUuid(UUID.randomUUID().toString());
 
 		policyRepository.save(pe);
 

@@ -1,4 +1,4 @@
-package com.policymicroservice.mainapp;
+package com.policymicroservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
